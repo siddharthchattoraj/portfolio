@@ -21,6 +21,16 @@
 	<link rel="stylesheet" href="../css/performance.css" />
 
 	<link rel="icon" type="image/webp" href="../images/siddharth_chattoraj.webp" />
+	<style>
+    .performance-media { display:grid; gap:18px; min-width:0; }
+    .performance-media .project-video { margin-top:0; box-sizing:border-box; }
+    .project-info .sketch-actions { flex-wrap:nowrap; gap:12px; }
+    .buttons.sketch-actions .cta-block { flex:0 1 auto; min-width:0; }
+    .sketch-actions button { white-space:nowrap; }
+    @media (max-width:400px) {
+      .sketch-actions button { padding:.7rem .85rem; font-size:.9rem; }
+    }
+  </style>
 </head>
 
 <body>
@@ -55,8 +65,11 @@
 		</div>
 
 		<div class="split-block">
-			<!-- Media grid with 9 images from data-webp/LEDs -->
-			<div class="media-grid led-grid">
+			<div class="performance-media">
+				<div class="project-video">
+					<iframe src="https://www.youtube.com/embed/fxwzixMv4U0?autoplay=1&mute=1&loop=1&playlist=fxwzixMv4U0&controls=0&rel=0&playsinline=1&modestbranding=1" title="Autoplaying silent performance video for programmable LED dance costumes" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>
+				</div>
+				<div class="media-grid led-grid">
 				<div class="tile">
 					<a class="tile-link" href="../data-webp/LEDs/LED Image 1.webp" rel="noopener" aria-label="Open LED Image 1">
 						<div class="tile-media">
@@ -93,6 +106,31 @@
 					<div class="tile-caption">Performance Picture</div>
 				</div>
 
+				<div class="tile pattern-tile">
+					<a class="tile-link" href="../data-webp/LEDs/LED PATTERNS.webp" rel="noopener" aria-label="Open LED Patterns">
+						<div class="tile-media">
+							<img src="../data-webp/LEDs/LED PATTERNS.webp" alt="LED Patterns">
+						</div>
+					</a>
+					<div class="tile-caption">LED Patterns</div>
+				</div>
+				</div>
+			</div>
+
+			<!-- Narrative and details -->
+			<div class="project-info">
+				<div class="desc">
+					This creativity-support tool explores how wearable technology can expand dancers’ expressive agency without restricting movement. I designed and built two live-programmable costumes, each integrated with 124 addressable LEDs and controlled through a Pixelblaze microcontroller. Rather than serving as decorative lighting, the costumes use pixel-mapped patterns that can be shaped in real time during performance, allowing shifts in movement, stillness, energy, and duet dynamics to appear directly on the body.
+					<br><br>
+					The costume system was developed through iterative prototyping, rehearsal testing, and performer feedback. Early LED layouts created issues with tension, solder-joint stress, and restricted movement, so the final design used a layered textile structure and a continuous “snake” LED path that improved comfort, repairability, and visual continuity. Originally presented in performance at UCSB’s Ballet Studio Theater, the work was presented at ACM SIGGRAPH 2026 as part of the SIGGRAPH Posters program and published in the conference proceedings.
+				</div>
+
+				<!-- Moved download buttons to appear right after the writing -->
+				<div class="buttons sketch-actions">
+					<a href="../data-files/Wearable Initial Tech Sketch.jpeg" download target="_blank" rel="noopener" class="cta-block"><button>Initial Sketch</button></a>
+					<a href="../data-files/Wearable Tech Research.pdf" target="_blank" rel="noopener" class="cta-block"><button>Research</button></a>
+				</div>
+				<div class="media-grid construction-grid">
 				<div class="tile">
 					<a class="tile-link" href="../data-webp/LEDs/Costume Over.webp" rel="noopener" aria-label="Open Costume Over">
 						<div class="tile-media">
@@ -128,33 +166,6 @@
 					</a>
 					<div class="tile-caption">Interface to Control LEDs</div>
 				</div>
-
-				<div class="tile pattern-tile">
-					<a class="tile-link" href="../data-webp/LEDs/LED PATTERNS.webp" rel="noopener" aria-label="Open LED Patterns">
-						<div class="tile-media">
-							<img src="../data-webp/LEDs/LED PATTERNS.webp" alt="LED Patterns">
-						</div>
-					</a>
-					<div class="tile-caption">LED Patterns</div>
-				</div>
-
-			</div>
-
-			<!-- Narrative and details -->
-			<div class="project-info">
-				<div class="desc">
-					This creativity-support tool explores how wearable technology can expand dancers’ expressive agency without restricting movement. I designed and built two live-programmable costumes, each integrated with 124 addressable LEDs and controlled through a Pixelblaze microcontroller. Rather than serving as decorative lighting, the costumes use pixel-mapped patterns that can be shaped in real time during performance, allowing shifts in movement, stillness, energy, and duet dynamics to appear directly on the body.
-					<br><br>
-					The costume system was developed through iterative prototyping, rehearsal testing, and performer feedback. Early LED layouts created issues with tension, solder-joint stress, and restricted movement, so the final design used a layered textile structure and a continuous “snake” LED path that improved comfort, repairability, and visual continuity. Originally presented in performance at UCSB’s Ballet Studio Theater, the work was presented at ACM SIGGRAPH 2026 as part of the SIGGRAPH Posters program and published in the conference proceedings.
-				</div>
-
-				<!-- Moved download buttons to appear right after the writing -->
-				<div class="buttons">
-					<a href="../data-files/Wearable Initial Tech Sketch.jpeg" download target="_blank" rel="noopener" class="cta-block"><button>Initial Sketch</button></a>
-					<a href="../data-files/Wearable Tech Research.pdf" target="_blank" rel="noopener" class="cta-block"><button>Research</button></a>
-				</div>
-				<div class="project-video">
-					<iframe src="https://www.youtube.com/embed/fxwzixMv4U0?autoplay=1&mute=1&loop=1&playlist=fxwzixMv4U0&controls=0&rel=0&playsinline=1&modestbranding=1" title="Autoplaying silent performance video for programmable LED dance costumes" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>
 				</div>
         
 			</div>
@@ -169,4 +180,3 @@
 	</section>
 </body>
 </html>
-
