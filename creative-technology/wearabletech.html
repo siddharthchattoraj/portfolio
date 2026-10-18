@@ -27,6 +27,15 @@
     .project-info .sketch-actions { flex-wrap:nowrap; gap:12px; }
     .buttons.sketch-actions .cta-block { flex:0 1 auto; min-width:0; }
     .sketch-actions button { white-space:nowrap; }
+    @media (min-width:960px) {
+      .split-block { row-gap:18px; }
+      .performance-media, .project-info { display:contents; }
+      .performance-media > .project-video { grid-column:1; grid-row:1; }
+      .project-summary { grid-column:2; grid-row:1; }
+      .performance-media > .led-grid { grid-column:1; grid-row:2; }
+      .construction-grid { grid-column:2; grid-row:2; align-content:start; }
+      .sketch-actions { margin-bottom:0; }
+    }
     @media (max-width:400px) {
       .sketch-actions button { padding:.7rem .85rem; font-size:.9rem; }
     }
@@ -119,6 +128,7 @@
 
 			<!-- Narrative and details -->
 			<div class="project-info">
+				<div class="project-summary">
 				<div class="desc">
 					This creativity-support tool explores how wearable technology can expand dancers’ expressive agency without restricting movement. I designed and built two live-programmable costumes, each integrated with 124 addressable LEDs and controlled through a Pixelblaze microcontroller. Rather than serving as decorative lighting, the costumes use pixel-mapped patterns that can be shaped in real time during performance, allowing shifts in movement, stillness, energy, and duet dynamics to appear directly on the body.
 					<br><br>
@@ -129,6 +139,7 @@
 				<div class="buttons sketch-actions">
 					<a href="../data-files/Wearable Initial Tech Sketch.jpeg" download target="_blank" rel="noopener" class="cta-block"><button>Initial Sketch</button></a>
 					<a href="../data-files/Wearable Tech Research.pdf" target="_blank" rel="noopener" class="cta-block"><button>Research</button></a>
+				</div>
 				</div>
 				<div class="media-grid construction-grid">
 				<div class="tile">
